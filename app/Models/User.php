@@ -41,4 +41,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /**
+     * Get all of the posts for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Collection|\App\Models\Post[]
+     */
+
+     
+
+     public function posts(){
+            return $this->hasMany(Post::class);
+     }
+
+     public function comments(){
+            return $this->hasMany(Comment::class);
+     }
 }
