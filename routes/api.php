@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,7 @@ Route::get('/test', function () {
         'message' => 'Hello World!',
     ], 200);
 });
+
+
+
+Route::post('/user', [UserController::class, 'createUser']);
