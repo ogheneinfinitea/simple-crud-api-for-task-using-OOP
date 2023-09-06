@@ -12,7 +12,6 @@ class UserController extends Controller
 
 public function createUser(Request $request)
 {
-    return $request->all();
 
 }
 
